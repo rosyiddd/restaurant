@@ -33,7 +33,7 @@ const Login = () => {
                 <button className={styles.button} onClick={handleClick}>
                     Login
                 </button>
-                {error && <span className={styles.error}>Wrong credentials or You are not admin!</span>}
+                {error && <span className={styles.error}>You are not admin!</span>}
             </div>
         </div>
     )
