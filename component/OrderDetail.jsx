@@ -1,7 +1,7 @@
 import styles from "../styles/OrderDetail.module.css"
 import { useState } from "react"
 
-export default function OrderDetail({ total, createOrder }) {
+export default function OrderDetail({ total, createOrder, setCash }) {
     const [customer, setCustomer] = useState("")
     const [address, setAddress] = useState("")
 
@@ -11,6 +11,7 @@ export default function OrderDetail({ total, createOrder }) {
     return (
         <div className={styles.container}>
             <div className={styles.wrapper}>
+                <span onClick={() => setCash(false)} className={styles.close}>X</span>
                 <h1 className={styles.title}>You will pay Rp{total} after delivery.</h1>
                 <div className={styles.item}>
                     <label className={styles.label}>Name</label>

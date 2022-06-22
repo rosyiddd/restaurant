@@ -164,7 +164,7 @@ export default function Cart() {
                         : <button onClick={() => setOpen(true)} className={styles.button} disabled={cart.products.length === 0}>PAID</button>}
                 </div>
             </div>
-            {cash && <OrderDetail total={cart.total} createOrder={createOrder} />}
+            {cash && <OrderDetail total={cart.total} createOrder={createOrder} setCash={setCash} />}
         </div>
     )
 }

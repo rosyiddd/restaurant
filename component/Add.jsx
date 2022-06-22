@@ -33,7 +33,7 @@ export default function Add({ setClose }) {
             const newProduct = {
                 title, desc, prices, extraOptions, img: url
             }
-            await Axios.post("https://restaurant-rouge.vercel.app/api/products", newProduct)
+            await Axios.post("http://localhost:3000/api/products", newProduct)
             router.reload()
         } catch (err) {
             console.log(err)
