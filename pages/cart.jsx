@@ -24,7 +24,7 @@ export default function Cart() {
 
     const createOrder = async data => {
         try {
-            const res = await Axios.post("http://localhost:3000/api/orders", data)
+            const res = await Axios.post("https://restaurant-rosyiddd.vercel.app/api/orders", data)
             res.status === 201 && router.push("/orders/" + res.data._id)
             dispatch(reset())
         } catch (err) {

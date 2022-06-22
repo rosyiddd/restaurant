@@ -14,7 +14,7 @@ export default function Home({ admin }) {
   useEffect(() => {
     const getPizzaList = async () => {
       try {
-        const res = await Axios.get("http://localhost:3000/api/products")
+        const res = await Axios.get("https://restaurant-rosyiddd.vercel.app/api/products")
         setPizzaList(res.data)
       } catch (err) {
         console.log(err)
